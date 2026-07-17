@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "title": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "price": 12.99,
+    "category": "Classic",
+    "cover": "images/gatsby.jpg",
+    "description": "A story of wealth, love, and the American Dream in the 1920s."
+  },
+  {
+    "id": 2,
+    "title": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "price": 14.99,
+    "category": "Classic",
+    "cover": "images/mockingbird.jpg",
+    "description": "A powerful story about racial injustice and moral growth."
+  },
+  {
+    "id": 3,
+    "title": "1984",
+    "author": "George Orwell",
+    "price": 11.99,
+    "category": "Dystopian",
+    "cover": "images/1984.jpg",
+    "description": "A chilling vision of a totalitarian future society."
+  },
+  {
+    "id": 4,
+    "title": "Harry Potter",
+    "author": "J.K. Rowling",
+    "price": 19.99,
+    "category": "Fantasy",
+    "cover": "images/harry.jpg",
+    "description": "The journey of a young wizard discovering his magical destiny."
+  },
+  {
+    "id": 5,
+    "title": "The Hobbit",
+    "author": "J.R.R. Tolkien",
+    "price": 13.99,
+    "category": "Fantasy",
+    "cover": "images/hobbit.jpg",
+    "description": "A hobbit's epic adventure to reclaim a lost kingdom."
+  },
+  {
+    "id": 6,
+    "title": "Pride and Prejudice",
+    "author": "Jane Austen",
+    "price": 9.99,
+    "category": "Classic",
+    "cover": "images/pride.jpg",
+    "description": "A witty exploration of love, marriage, and social class."
+  },
+  {
+    "id": 7,
+    "title": "The Catcher in the Rye",
+    "author": "J.D. Salinger",
+    "price": 10.99,
+    "category": "Classic",
+    "cover": "images/catcher.jpg",
+    "description": "A teenager's rebellious journey through New York City."
+  },
+  {
+    "id": 8,
+    "title": "Dune",
+    "author": "Frank Herbert",
+    "price": 16.99,
+    "category": "Sci-Fi",
+    "cover": "images/dune.jpg",
+    "description": "A epic sci-fi saga of politics, ecology, and destiny."
+  },
+  {
+    "id": 9,
+    "title": "The Alchemist",
+    "author": "Paulo Coelho",
+    "price": 11.49,
+    "category": "Adventure",
+    "cover": "images/alchemist.jpg",
+    "description": "A shepherd's journey to discover his personal legend."
+  },
+  {
+    "id": 10,
+    "title": "The Da Vinci Code",
+    "author": "Dan Brown",
+    "price": 14.49,
+    "category": "Mystery",
+    "cover": "images/davinci.jpg",
+    "description": "A thrilling mystery involving art, religion, and secrets."
+  }
+]

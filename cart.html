@@ -1,0 +1,149 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Untitled Page</title>
+    
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+<script>
+    showheader();
+    showfooter();
+</script>
+<body id='body'>
+<div id="header"></div>
+<main>
+  <section class="card">
+    <h1 id="cartTitle">Your Shopping Cart (2 Items)</h1>
+
+    <div class="layout">
+
+      <div id="items">
+        <div></div>
+      </div>
+
+
+      <aside class="summary">
+        <h2>Order Summary</h2>
+
+        <div class="row">
+          <span>Subtotal</span>
+          <span id="subtotal">$0.00</span>
+        </div>
+
+        <div class="row">
+          <span>Shipping</span>
+          <span id="shipping">$0.00</span>
+        </div>
+
+        <hr>
+
+        <div class="row total">
+          <span>Total</span>
+          <span id="total">$0.00</span>
+        </div>
+
+        <button class="btn checkout">Proceed to Checkout</button>
+
+        <input type="text" placeholder="Apply Promo Code">
+      </aside>
+
+
+
+    </div>
+  </section>
+</main>
+<script type="module">
+  import { getCart, getBookById } from "./main2.js";
+
+  document.addEventListener("DOMContentLoaded", async () => {
+    const itemsContainer = document.getElementById("items");
+    const carts = getCart(); // e.g., [1, 2, 3]
+
+    if (carts && carts.length > 0) {
+      // 1. Map cart IDs to their respective book-fetching promises
+      const bookPromises = carts.map(id => getBookById(id));
+      
+      try {
+        // 2. Wait for all book data to resolve
+        const books = await Promise.all(bookPromises);
+
+        // 3. Clear container and generate elements
+        itemsContainer.innerHTML = ""; 
+        
+        books.forEach(book => {
+          if (book) {
+            // Create a wrapper element for each cart item
+            const itemElement = document.createElement("div");
+            itemElement.className = "cart-item item";
+            itemElement.style.display = "flex";
+            itemElement.style.marginBottom = "15px";
+            itemElement.style.borderBottom = "1px solid #ccc";
+            itemElement.style.paddingBottom = "10px";
+
+            // Populate the elements with book data
+            itemElement.innerHTML = `
+              <img src="${book.cover}" alt="${book.title}" style="width: 80px; height: auto; margin-right: 15px;">
+              <div class="item-details">
+                <h3 style="margin: 0 0 5px 0;">${book.title}</h3>
+                <p style="margin: 0 0 5px 0;">Author: ${book.author}</p>
+                <p class="price-val" style="margin: 0 0 5px 0; font-weight: bold;">${book.price.toFixed(2)}</p>
+              </div>
+            `;
+
+            // Append the new element to the container
+            itemsContainer.appendChild(itemElement);
+          }
+        });
+      } catch (error) {
+        console.error("Error loading cart items:", error);
+        itemsContainer.innerHTML = "<p>Failed to load cart items.</p>";
+      }
+    } else {
+      itemsContainer.innerHTML = "<p>Your cart is empty.</p>";
+    }
+    update();
+    
+  });
+  function update() 
+{
+
+    const rows = items.getElementsByClassName("item");
+
+    let subtotal = 0;
+    let count = 0;
+
+    for (let i = 0; i < rows.length; i++) 
+    {
+        console.log(i);
+        //const qty = Number(rows[i].querySelector(".qty-val").textContent);
+        const qty = 1;
+        const price = Number(rows[i].querySelector(".price-val").textContent);
+        console.log(price);
+
+        subtotal += (qty * price);
+        count += qty;
+    }
+
+    let shipping = 0;
+
+    if (rows.length > 0) 
+    {
+        shipping = 5;
+    }
+
+    document.getElementById("subtotal").textContent = "$" + subtotal.toFixed(2);
+    document.getElementById("shipping").textContent = "$" + shipping.toFixed(2);
+    document.getElementById("total").textContent = "$" + (subtotal + shipping).toFixed(2);
+    //document.getElementById("badge").textContent = count;
+    document.getElementById("cartTitle").textContent = "Your Shopping Cart (" + rows.length + " Items)";
+}
+</script>
+<div style="height: 100px;"></div>
+<div id="footer"></div>
+</body>
+
+</html>

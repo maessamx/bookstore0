@@ -1,0 +1,65 @@
+
+.form-container {
+ 
+    margin: 20px;
+}
+.form-box{
+   background: #fff; border-radius: 12px;
+    box-shadow: 0 10px 30px #8ab5e0; 
+    padding: 20px 60px;
+    max-width: 300px;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.dark .form-box{
+    background-color: var(--clr-accent);
+}
+.form-box h2 { 
+    font-family: 'Playfair Display', serif; font-size: 2rem; color: #2c1b18; 
+    margin-bottom: 6px; 
+}
+.subtitle { 
+    color: #7f7f7f; font-size: 0.85rem; margin-bottom: 25px; 
+}
+.input-group { 
+    margin-bottom: 16px; 
+}
+.input-group label { 
+    display: block; font-size: 0.8rem;  margin-bottom: 4px; font-weight: 500; 
+    color: #2c1b18;
+    text-align: left;
+}
+.input-group input, .btn-primary { 
+    width: 100%; border-radius: 6px; 
+}
+.input-group input {
+    padding: 10px 14px; border: 1px solid #e0d5c1; font-size: 0.9rem; outline: none;
+    transition: border-color 0.3s;
+}
+.input-group input:focus { 
+    border-color: #d4a373; 
+}
+.password-wrapper { 
+    position: relative; 
+}
+.password-wrapper i {
+    position: absolute; right: -20px; top: 50%; transform: translateY(-50%); cursor: pointer;
+    color: #7f7f7f;
+}
+.toggle-link a { 
+    color: #d4a373; text-decoration: none; font-weight: 600; 
+}
+.toggle-link a:hover { 
+    text-decoration: underline; 
+}
+
+
+.toggle-link { 
+    text-align: center; font-size: 0.85rem; color: #5c5c5c; margin-top: 20px; 
+}
+.hidden { 
+    display: none !important; 
+}
