@@ -31,10 +31,11 @@ function initializeUser() {
       const nameHeader = document.getElementById("nameheader");
       const emailHeader = document.getElementById("emailheader");
       const menuM = document.getElementById("menum");
-
+      const loginli = document.getElementById("loginli");
       if (nameHeader) nameHeader.textContent = user2.name;
       if (emailHeader) emailHeader.textContent = user2.email;
       if (menuM) menuM.setAttribute("class", "relative menum active");
+      if (loginli) loginli.setAttribute("class", "none");
     } catch (e) {
       console.error("Error parsing user data from localStorage", e);
     }
