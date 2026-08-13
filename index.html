@@ -1,227 +1,272 @@
-<!DOCTYPE html
-    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Untitled Page</title>
-    
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="home.css">
-    <link rel="stylesheet" href="style.css">
-    <script src="main.js"></script>
-<script>
-    showheader(); 
-    showfooter();
-</script>
-<body id='body'>
-    
-<div id="header"></div>
-<div class="pic" id="home">
-    <p class="one">Your next adventure is <br>just a page turn away.</p>
-    <p class="two">Explore thouands of titles from our community of book lovers.</p>
-    <a href="#books" class="btn flex17" style="text-align: center;">START BROWSING NOW</a>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BookFox — Bookstore</title>
+  <link rel="stylesheet" href="/css/base.css?v=16">
+  <link rel="stylesheet" href="/css/store.css?v=16">
+  <script src="/script/data.js?v=16" defer></script>
+  <script src="/script/main.js?v=16" defer></script>
+  <script src="/script/home.js?v=16" defer></script>
+</head>
+<body id="body" data-page="home">
+  <div id="header"></div>
+
+  <section class="hero">
+    <div class="container hero-card">
+      <div class="hero-main">
+        <span class="hero-chip">
+          <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l3 3M15 15l3 3M18 6l-3 3M9 15l-3 3"/></svg>
+          Free shipping over $30 · 2–4 day delivery
+        </span>
+        <h1>Find your next<br><span class="hero-grad">favourite book</span></h1>
+        <p>From timeless classics to the latest bestsellers and study essentials — explore our curated shelves and order in seconds.</p>
+        <form class="hero-search" onsubmit="event.preventDefault(); document.getElementById('books').scrollIntoView({behavior:'smooth'}); return false;">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" style="flex-shrink:0;color:var(--muted)"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input id="searchInput" type="search" placeholder="Search by title or author…" autocomplete="off">
+          <button class="btn btn-accent" type="submit">Search</button>
+        </form>
+        <div class="hero-actions">
+          <a class="btn btn-accent" href="#books">
+            Start browsing
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a class="btn btn-ghost" href="/stationery/">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+            Shop stationery
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div><b id="heroBooks">0</b><span>Books in store</span></div>
+          <div><b id="heroCats">0</b><span>Categories</span></div>
+          <div><b id="heroReaders">0</b><span>Happy readers</span></div>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="hero-panel"></div>
+        <div class="hero-hex"></div>
+        <div class="hbt hb1">
+          <span class="bt-spine"></span>
+          <span class="bt-brand">BOOKFOX</span>
+          <span class="bt-name">READ</span>
+          <span class="bt-hex"></span>
+          <span class="bt-cat">Classic</span>
+        </div>
+        <div class="hbt hb2">
+          <span class="bt-spine"></span>
+          <span class="bt-brand">BOOKFOX</span>
+          <span class="bt-name">LEARN</span>
+          <span class="bt-hex"></span>
+          <span class="bt-cat">Fantasy</span>
+        </div>
+        <div class="hbt hb3">
+          <span class="bt-spine"></span>
+          <span class="bt-brand">BOOKFOX</span>
+          <span class="bt-name">GROW</span>
+          <span class="bt-hex"></span>
+          <span class="bt-cat">Sci-Fi</span>
+        </div>
+      </div>
     </div>
-<section id="Books">
-    <h2>
-        Books
-    </h2>
+  </section>
+
+  <div class="trust-bar">
+    <div class="container trust-inner">
+      <div class="trust-item">
+        <span class="trust-ic">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 3h15v13H1z"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+        </span>
+        <div><b>Free shipping</b><span>on orders over $30</span></div>
+      </div>
+      <div class="trust-item">
+        <span class="trust-ic">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+        </span>
+        <div><b>2–4 day delivery</b><span>anywhere in the country</span></div>
+      </div>
+      <div class="trust-item">
+        <span class="trust-ic">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+        </span>
+        <div><b>Secure checkout</b><span>card &amp; cash payments</span></div>
+      </div>
+      <div class="trust-item">
+        <span class="trust-ic">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>
+        </span>
+        <div><b>30-day returns</b><span>no questions asked</span></div>
+      </div>
+    </div>
+  </div>
+
+  <section class="section authors-sec" id="authors">
     <div class="container">
-        
-        <div class="book">
-            <div class="co">
-            <div class="im">
-              
-            </div>
-            <div class="words">
-            <h1 class="head-one">Automic Habit</h1>
-            <h2 class="head-two">By John Doe</h2>
-        <div class="stars">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
+      <div class="section-head">
+        <div>
+          <h2>Browse by Author</h2>
+          <p class="sub">Find every book from your favourite writers</p>
         </div>
-        <span class="price">10.2$</span>
-        <button class="add-btn" data-id="1">
-            Add To Cart
-          <i class="fa-solid fa-cart-shopping"></i>
-        </button>
-        </div>
-        </div>
-        </div>
-
-
-
-
-         <div class="book">
-            <div class="co">
-            <div class="im"></div>
-            <div class="words">
-            <h1 class="head-one">Rich Dad, poor dad</h1>
-            <h2 class="head-two">By John Doe</h2>
-        <div class="stars">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-        </div>
-        <span class="price">19.2$</span>
-        <button class="add-btn" data-id="2">
-            Add To Cart
-          <i class="fa-solid fa-cart-shopping"></i>
-        </button>
-        </div>
-        </div>
-        </div>
-
-
-
-
-         <div class="book">
-            <div class="co">
-            <div class="im"></div>
-            <div class="words">
-            <h1 class="head-one">Animal Farm</h1>
-            <h2 class="head-two">By John Doe</h2>
-        <div class="stars">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-        </div>
-        <span class="price">12.2$</span>
-        <button class="add-btn" data-id="3">
-            Add To Cart
-          <i class="fa-solid fa-cart-shopping"></i>
-        </button>
-        </div>
-        </div>
-        </div>
-
-
-
-
-
-
-        <div class="book">
-            <div class="co">
-            <div class="im"></div>
-            <div class="words">
-            <h1 class="head-one">The Sielnt Hour</h1>
-            <h2 class="head-two">By John Doe</h2>
-        <div class="stars">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-        </div>
-        <span class="price">19.2$</span>
-        <button class="add-btn" data-id="4">
-            Add To Cart
-          <i class="fa-solid fa-cart-shopping"></i>
-        </button>
-        </div>
-        </div>
-        </div>
-
-
-
-
-        <div class="book">
-            <div class="co">
-            <div class="im"></div>
-            <div class="words">
-            <h1 class="head-one">mein kampf</h1>
-            <h2 class="head-two">By John Doe</h2>
-        <div class="stars">
-
-                <i class="fa-solid fa-star"></i>
-        </div>
-        <span class="price">100$</span>
-        <button class="add-btn" data-id="5">
-            Add To Cart
-          <i class="fa-solid fa-cart-shopping"></i>
-        </button>
-        </div>
-        </div>
-        </div>
-
-
-
-
-        <div class="book">
-            <div class="co">
-            <div class="im"></div>
-            <div class="words">
-            <h1 class="head-one">The Sielnt Hour</h1>
-            <h2 class="head-two">By John Doe</h2>
-        <div class="stars">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-        </div>
-        <span class="price">19.2$</span>
-        <button class="add-btn" data-id="6">
-            Add To Cart
-          <i class="fa-solid fa-cart-shopping"></i>
-        </button>
-        </div>
-        </div>
-        </div>
-
-
-
-        <div class="book">
-            <div class="co">
-            <div class="im"></div>
-            <div class="words">
-            <h1 class="head-one">Dark Secrets</h1>
-            <h2 class="head-two">By John Doe</h2>
-        <div class="stars">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-        </div>
-        <span class="price">15.2$</span>
-        <button class="add-btn" data-id="7">
-            Add To Cart
-          <i class="fa-solid fa-cart-shopping"></i>
-        </button>
-        </div>
-        </div>
-        </div>
-
-
-
-
-
-         <div class="book">
-            <div class="co">
-            <div class="im"></div>
-            <div class="words">
-            <h1 class="head-one">The Final Clue</h1>
-            <h2 class="head-two">By John Doe</h2>
-        <div class="stars">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-        </div>
-        <span class="price">22.2$</span>
-        <button class="add-btn" data-id="8">
-            Add To Cart
-          <i class="fa-solid fa-cart-shopping"></i>
-        </button>
-        </div>
-        </div>
-        </div>
+      </div>
+      <div class="author-cards" id="authorCards"></div>
     </div>
-</section>
-<script type="module" src="script.js"></script>
-<div style="height: 100px;"></div>
-<div id="footer"></div>
-</body>
+  </section>
 
+  <section class="section" id="books">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2>Browse Books</h2>
+          <p class="sub" id="resultInfo">Showing all books</p>
+        </div>
+        <div class="filters">
+          <select class="input" id="sortSelect" aria-label="Sort books" style="width:auto">
+            <option value="featured">Featured</option>
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+            <option value="title">Title A–Z</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="chips" id="catChips" style="margin-bottom:24px"></div>
+
+      <div class="books-grid" id="booksGrid"></div>
+    </div>
+  </section>
+
+  <section class="section why">
+    <div class="container">
+      <div class="section-head" style="justify-content:center;text-align:center;margin-bottom:30px">
+        <div>
+          <h2>Why BookFox?</h2>
+          <p class="sub">Everything you need for reading and study — in one place.</p>
+        </div>
+      </div>
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-ic">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          </div>
+          <h3>Curated selection</h3>
+          <p>Hand-picked classics, bestsellers and school supplies — quality you can trust, every time.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-ic">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+          </div>
+          <h3>Fast delivery</h3>
+          <p>Orders packed the same day and delivered to your door in 2–4 days, anywhere in the country.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-ic">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+          </div>
+          <h3>Secure checkout</h3>
+          <p>Card, PayPal or cash on delivery — your payment details stay private and protected.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-ic">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M16 8l-4.5 4.5"/><path d="M8 8h8v8"/></svg>
+          </div>
+          <h3>Best prices</h3>
+          <p>Direct-from-publisher pricing means you always pay less than the shelf price.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="container">
+      <div class="cta-card">
+        <div class="cta-main">
+          <span class="cta-chip">
+            <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l3 3M15 15l3 3M18 6l-3 3M9 15l-3 3"/></svg>
+            2–4 day delivery nationwide
+          </span>
+          <h2>Ready to start your <span class="cta-grad">next chapter?</span></h2>
+          <p>Browse our bestsellers or stock up on study essentials — checkout takes less than a minute.</p>
+          <div class="cta-actions">
+            <a class="btn btn-accent" href="#books">
+              Browse books
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a class="btn btn-ghost" href="/stationery/">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              Shop stationery
+            </a>
+          </div>
+          <div class="cta-stats">
+            <div><b>10+</b><span>Books &amp; supplies</span></div>
+            <div><b>2–4</b><span>Day delivery</span></div>
+            <div><b>4.9★</b><span>Customer rating</span></div>
+          </div>
+        </div>
+        <div class="cta-art" aria-hidden="true">
+          <div class="cta-panel"></div>
+          <div class="bt b1">
+            <span class="bt-spine"></span>
+            <span class="bt-brand">BOOKFOX</span>
+            <span class="bt-name">READ</span>
+            <span class="bt-hex"></span>
+            <span class="bt-cat">Classic</span>
+          </div>
+          <div class="bt b2">
+            <span class="bt-spine"></span>
+            <span class="bt-brand">BOOKFOX</span>
+            <span class="bt-name">LEARN</span>
+            <span class="bt-hex"></span>
+            <span class="bt-cat">Fantasy</span>
+          </div>
+          <div class="bt b3">
+            <span class="bt-spine"></span>
+            <span class="bt-brand">BOOKFOX</span>
+            <span class="bt-name">GROW</span>
+            <span class="bt-hex"></span>
+            <span class="bt-cat">Sci-Fi</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer"></div>
+
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart">
+    <div class="cart-head">
+      <h3>Your Cart</h3>
+      <button class="icon-btn sm" id="cartClose" aria-label="Close cart">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-foot">
+      <div class="cart-subtotal">
+        <span class="muted">Subtotal</span>
+        <b id="cartTotal">$0.00</b>
+      </div>
+      <button class="btn btn-accent w100" id="checkoutBtn">Checkout →</button>
+    </div>
+  </aside>
+
+
+  <div class="modal" id="orderModal">
+    <div class="modal-card modal-sm">
+      <div class="modal-body center" style="padding:34px 26px">
+        <div style="margin-bottom:14px">
+          <svg viewBox="0 0 24 24" width="54" height="54" fill="none" stroke="#2e7d4f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <h3 style="font-size:22px;margin-bottom:6px">Order placed!</h3>
+        <p class="muted" style="font-size:14px">Thank you for shopping with BookFox.</p>
+        <div class="order-summary" style="text-align:left">
+          <div class="row"><span class="muted">Order number</span><b id="ordId"></b></div>
+          <div class="row"><span class="muted">Items</span><span id="ordCount"></span></div>
+          <div class="row total"><span>Total</span><span id="ordTotal"></span></div>
+        </div>
+        <button class="btn btn-primary w100 mt-16" onclick="closeModal('orderModal')">Continue shopping</button>
+      </div>
+    </div>
+  </div>
+</body>
 </html>

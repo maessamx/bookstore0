@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meet the Team — BookFox</title>
+  <link rel="stylesheet" href="/css/base.css?v=16">
+  <link rel="stylesheet" href="/css/store.css?v=16">
+  <link rel="stylesheet" href="/css/team.css?v=16">
+  <script src="/script/data.js?v=16" defer></script>
+  <script src="/script/main.js?v=16" defer></script>
+</head>
+<body id="body" data-page="team">
+  <div id="header"></div>
+
+  <section class="team-hero">
+    <div class="container team-hero-inner">
+      <div class="team-main">
+        <span class="team-chip">
+          <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M12 11l3-1.5v4L12 15l-3-1.5v-4z"/></svg>
+          Summer Training Project · 2026
+        </span>
+        <h1>Built by the <span class="team-grad">Helwan Engineering</span> Team</h1>
+        <p>This project was developed as a summer training project by five Computer Engineering students at the Faculty of Engineering, Helwan University.</p>
+        <div class="team-meta">
+          <div><b>Helwan University</b><span>Faculty of Engineering</span></div>
+          <div><b>Computer Engineering</b><span>Summer Training 2026</span></div>
+          <div><b>BookFox</b><span>Bookstore Web App</span></div>
+        </div>
+      </div>
+      <div class="team-art" aria-hidden="true">
+        <div class="team-ring"></div>
+        <div class="thb thb1">
+          <span class="bt-spine"></span>
+          <span class="bt-brand">BOOKFOX</span>
+          <span class="bt-name">CODE</span>
+          <span class="bt-hex"></span>
+          <span class="bt-cat">HTML · CSS · JS</span>
+        </div>
+        <div class="thb thb2">
+          <span class="bt-spine"></span>
+          <span class="bt-brand">BOOKFOX</span>
+          <span class="bt-name">SHIP</span>
+          <span class="bt-hex"></span>
+          <span class="bt-cat">Summer 2026</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head" style="justify-content:center;text-align:center;margin-bottom:34px">
+        <div>
+          <h2>Meet the Developers</h2>
+          <p class="sub">The minds behind BookFox</p>
+        </div>
+      </div>
+
+      <div class="team-grid" id="teamGrid"></div>
+    </div>
+  </section>
+
+  <section class="cta" style="padding-top:0">
+    <div class="container">
+      <div class="cta-card">
+        <div class="cta-main">
+          <span class="cta-chip">
+            <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l3 3M15 15l3 3M18 6l-3 3M9 15l-3 3"/></svg>
+            One team · One goal
+          </span>
+          <h2>We built this store <span class="cta-grad">from scratch.</span></h2>
+          <p>Front-end only, no frameworks — pure HTML, CSS and JavaScript with a full admin panel, cart and checkout.</p>
+          <div class="cta-actions">
+            <a class="btn btn-accent" href="/">Visit the store</a>
+            <a class="btn btn-ghost" href="#teamGrid">Back to team</a>
+          </div>
+        </div>
+        <div class="cta-art" aria-hidden="true">
+          <div class="cta-panel"></div>
+          <div class="bt b1"><span class="bt-spine"></span><span class="bt-brand">BOOKFOX</span><span class="bt-name">TEAM</span><span class="bt-hex"></span><span class="bt-cat">2026</span></div>
+          <div class="bt b2"><span class="bt-spine"></span><span class="bt-brand">BOOKFOX</span><span class="bt-name">BUILD</span><span class="bt-hex"></span><span class="bt-cat">Frontend</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer"></div>
+
+<script defer>
+  const TEAM = [
+    { name: "Mahmoud Essam", img: "/images/team/student-1.jpg" },
+    { name: "Youssef Farag", img: "/images/team/student-2.jpg" },
+    { name: "Karim Arafat", img: "/images/team/student-3.jpg" },
+    { name: "Youssef Mohamed", img: "/images/team/student-4.jpg" },
+    { name: "Youssef Hegazy", img: "/images/team/student-5.jpg" },
+  ];
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const grid = $("#teamGrid");
+    grid.innerHTML = TEAM.map((m, i) => `
+      <article class="tcard">
+        <div class="tphoto">
+          <div class="tglow"></div>
+          <img src="${m.img}" alt="${esc(m.name)}" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+          <span class="tfallback" style="display:none">${esc(m.name.split(" ").map(w => w[0]).join(""))}</span>
+          <span class="trank">0${i + 1}</span>
+        </div>
+        <div class="tinfo">
+          <h3>${esc(m.name)}</h3>
+          <span class="tline"></span>
+          <p class="tinit">${esc(m.name.split(" ").map(w => w[0]).join("").toUpperCase())}</p>
+        </div>
+      </article>`).join("");
+  });
+</script>
+</body>
+</html>

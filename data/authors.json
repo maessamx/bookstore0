@@ -1,0 +1,114 @@
+[
+  {
+    "id": "a1",
+    "name": "F. Scott Fitzgerald",
+    "type": "Author",
+    "country": "USA",
+    "bio": "American novelist best known for capturing the Jazz Age. His lyrical style and sharp social observation made him one of the most celebrated writers of the 20th century.",
+    "joined": "1920"
+  },
+  {
+    "id": "a2",
+    "name": "Harper Lee",
+    "type": "Author",
+    "country": "USA",
+    "bio": "American author whose novel To Kill a Mockingbird became a cornerstone of modern literature, exploring justice, race and moral growth through a child's eyes.",
+    "joined": "1960"
+  },
+  {
+    "id": "a3",
+    "name": "George Orwell",
+    "type": "Author",
+    "country": "UK",
+    "bio": "English writer and essayist known for his penetrating social and political commentary. His dystopian visions remain chillingly relevant today.",
+    "joined": "1933"
+  },
+  {
+    "id": "a4",
+    "name": "J.K. Rowling",
+    "type": "Author",
+    "country": "UK",
+    "bio": "British author who created the Harry Potter universe, one of the best-selling book series in history, translated into more than 80 languages.",
+    "joined": "1997"
+  },
+  {
+    "id": "a5",
+    "name": "J.R.R. Tolkien",
+    "type": "Author",
+    "country": "UK",
+    "bio": "English philologist and fantasy pioneer. His legendarium, from The Hobbit to The Lord of the Rings, shaped the entire fantasy genre.",
+    "joined": "1937"
+  },
+  {
+    "id": "a6",
+    "name": "Jane Austen",
+    "type": "Author",
+    "country": "UK",
+    "bio": "English novelist whose works of romantic fiction, witty social commentary and sharp irony earned her enduring acclaim.",
+    "joined": "1811"
+  },
+  {
+    "id": "a7",
+    "name": "J.D. Salinger",
+    "type": "Author",
+    "country": "USA",
+    "bio": "American writer famed for The Catcher in the Rye, a landmark voice of teenage alienation and the search for authenticity.",
+    "joined": "1951"
+  },
+  {
+    "id": "a8",
+    "name": "Frank Herbert",
+    "type": "Author",
+    "country": "USA",
+    "bio": "American science fiction author best known for Dune, a sweeping epic of ecology, politics and religion that redefined the genre.",
+    "joined": "1965"
+  },
+  {
+    "id": "a9",
+    "name": "Paulo Coelho",
+    "type": "Author",
+    "country": "Brazil",
+    "bio": "Brazilian novelist whose fable The Alchemist became a global phenomenon, inspiring readers to follow their personal legend.",
+    "joined": "1988"
+  },
+  {
+    "id": "a10",
+    "name": "Dan Brown",
+    "type": "Author",
+    "country": "USA",
+    "bio": "American author of thriller novels blending cryptography, art, history and conspiracy in fast-paced puzzles.",
+    "joined": "2003"
+  },
+  {
+    "id": "a11",
+    "name": "Alex Michaelides",
+    "type": "Author",
+    "country": "UK",
+    "bio": "British-Cypriot author and screenwriter whose psychological thriller The Silent Patient became an international bestseller.",
+    "joined": "2019"
+  },
+  {
+    "id": "a12",
+    "name": "James Clear",
+    "type": "Author",
+    "country": "USA",
+    "bio": "Author and speaker focused on habits, decision-making and continuous improvement. Atomic Habits is his bestselling guide to behaviour change.",
+    "joined": "2018"
+  },
+  {
+    "id": "a13",
+    "name": "Andy Weir",
+    "type": "Author",
+    "country": "USA",
+    "bio": "American novelist known for The Martian, a hard science survival story praised for its accuracy and wit.",
+    "joined": "2014"
+  },
+  {
+    "id": "a14",
+    "name": "Stephen Hawking",
+    "type": "Author",
+    "country": "UK",
+    "bio": "Theoretical physicist and cosmologist whose A Brief History of Time brought the mysteries of the universe to millions of readers.",
+    "joined": "1988"
+  }
+]

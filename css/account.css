@@ -1,0 +1,37 @@
+.account-grid { display: grid; grid-template-columns: 300px 1fr; gap: 22px; align-items: start; }
+
+.acct-avatar {
+  width: 84px; height: 84px; margin: 0 auto; border-radius: 50%;
+  display: grid; place-items: center;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #241a05; font-size: 34px; font-weight: 800;
+  box-shadow: var(--shadow-md);
+}
+
+.orders-list { display: flex; flex-direction: column; gap: 18px; }
+.ord-card {
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+  box-shadow: var(--shadow-sm); padding: 20px 22px;
+  transition: box-shadow .15s;
+}
+.ord-card:hover { box-shadow: var(--shadow-md); }
+.ord-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.ord-head b { font-size: 15px; }
+.ord-items { margin-top: 14px; border-top: 1px dashed var(--border); padding-top: 10px; display: flex; flex-direction: column; gap: 8px; }
+.oi { display: flex; align-items: center; gap: 10px; font-size: 14px; }
+.oi .oi-name { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ord-notes {
+  margin-top: 12px; padding: 10px 13px; border-radius: 9px;
+  background: var(--accent-soft); border: 1px dashed var(--accent);
+  font-size: 13px; color: var(--warn);
+}
+.ord-foot {
+  margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap;
+}
+.ord-foot b { font-family: var(--font-head); font-size: 18px; color: var(--primary); }
+body.dark .ord-foot b { color: var(--accent-2); }
+
+@media (max-width: 860px) {
+  .account-grid { grid-template-columns: 1fr; }
+}

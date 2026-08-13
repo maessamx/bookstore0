@@ -1,0 +1,114 @@
+[
+  {
+    "id": "s1",
+    "title": "Scientific Calculator FX-991",
+    "category": "Calculators",
+    "price": 19.99,
+    "description": "460+ functions, natural textbook display, solar + battery powered. Ideal for high-school and university math."
+  },
+  {
+    "id": "s2",
+    "title": "Desktop Calculator 12-Digit",
+    "category": "Calculators",
+    "price": 6.49,
+    "description": "Large buttons, tiltable display and smooth keys for everyday office and home use."
+  },
+  {
+    "id": "s3",
+    "title": "Ballpoint Pens (Pack of 10)",
+    "category": "Writing",
+    "price": 3.99,
+    "description": "Smooth 0.7mm blue ink, comfortable grip and long-lasting cartridges for exams and notes."
+  },
+  {
+    "id": "s4",
+    "title": "Gel Pens Set — 24 Colors",
+    "category": "Writing",
+    "price": 8.99,
+    "description": "Vivid gel ink in 24 colors, perfect for highlighting, planning and creative journaling."
+  },
+  {
+    "id": "s5",
+    "title": "Mechanical Pencil 0.5mm",
+    "category": "Writing",
+    "price": 2.49,
+    "description": "Auto-advance lead with a cushioned grip — no sharpening needed, refillable in seconds."
+  },
+  {
+    "id": "s6",
+    "title": "A5 Spiral Notebooks (Pack of 3)",
+    "category": "Notebooks",
+    "price": 7.99,
+    "description": "80 sheets each, perforated pages and a sturdy cover built to survive a full school year."
+  },
+  {
+    "id": "s7",
+    "title": "A4 Hardcover Sketchbook",
+    "category": "Art",
+    "price": 9.49,
+    "description": "120gsm premium paper that holds up to ink, markers and light watercolor washes."
+  },
+  {
+    "id": "s8",
+    "title": "Geometry Set — 8 Pieces",
+    "category": "Geometry",
+    "price": 4.99,
+    "description": "Compass, protractor, rulers and set squares in a protective case for math and drafting."
+  },
+  {
+    "id": "s9",
+    "title": "Transparent Ruler 30cm",
+    "category": "Geometry",
+    "price": 1.99,
+    "description": "Clear plastic ruler with crisp centimeter and inch markings for precise measurements."
+  },
+  {
+    "id": "s10",
+    "title": "School Backpack 40L",
+    "category": "Bags",
+    "price": 24.99,
+    "description": "Padded laptop sleeve, water-resistant fabric and ergonomic straps for daily carrying comfort."
+  },
+  {
+    "id": "s11",
+    "title": "Pencil Case with Compartments",
+    "category": "Writing",
+    "price": 5.49,
+    "description": "Three zippered sections keep pens, pencils, erasers and small tools neatly organized."
+  },
+  {
+    "id": "s12",
+    "title": "Permanent Markers (Set of 12)",
+    "category": "Art",
+    "price": 6.99,
+    "description": "Quick-drying, smudge-proof ink in 12 colors for labeling, posters and projects."
+  },
+  {
+    "id": "s13",
+    "title": "Whiteboard Markers (Set of 4)",
+    "category": "Office",
+    "price": 4.99,
+    "description": "Low-odor dry-erase markers with chisel tips — ideal for whiteboards and presentations."
+  },
+  {
+    "id": "s14",
+    "title": "Stapler with 1000 Staples",
+    "category": "Office",
+    "price": 5.99,
+    "description": "Durable 25-sheet stapler with a comfortable grip and a full box of standard staples."
+  },
+  {
+    "id": "s15",
+    "title": "Highlighter Set (5 Colors)",
+    "category": "Writing",
+    "price": 4.49,
+    "description": "Vibrant, quick-drying highlighters that glide smoothly without bleeding through pages."
+  },
+  {
+    "id": "s16",
+    "title": "Binder Clips & Paper Clips Kit",
+    "category": "Office",
+    "price": 2.99,
+    "description": "Assorted sizes of binder and paper clips to keep every document neatly organized."
+  }
+]

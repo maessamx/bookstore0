@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Author — BookFox</title>
+  <link rel="stylesheet" href="/css/base.css?v=16">
+  <link rel="stylesheet" href="/css/store.css?v=16">
+  <link rel="stylesheet" href="/css/author.css?v=16">
+  <script src="/script/data.js?v=16" defer></script>
+  <script src="/script/main.js?v=16" defer></script>
+  <script src="/script/author.js?v=16" defer></script>
+</head>
+<body id="body" data-page="author">
+  <div id="header"></div>
+
+  <section class="author-hero">
+    <div class="container author-hero-card">
+      <div class="ah-left">
+        <span class="ah-chip">
+          <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          Author profile
+        </span>
+        <div class="ah-avatar" id="ahAvatar">A</div>
+        <h1 id="ahName">—</h1>
+        <div class="ah-cats" id="ahCats"></div>
+        <div class="ah-stats" id="ahStats"></div>
+      </div>
+      <div class="ah-art" aria-hidden="true">
+        <div class="ah-panel"></div>
+        <div class="ahb ahb1">
+          <span class="bt-spine"></span>
+          <span class="bt-brand">BOOKFOX</span>
+          <span class="bt-name">WRITE</span>
+          <span class="bt-hex"></span>
+          <span class="bt-cat">Author</span>
+        </div>
+        <div class="ahb ahb2">
+          <span class="bt-spine"></span>
+          <span class="bt-brand">BOOKFOX</span>
+          <span class="bt-name">READ</span>
+          <span class="bt-hex"></span>
+          <span class="bt-cat">Collection</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <nav class="crumbs" id="ahCrumbs" aria-label="breadcrumb"></nav>
+      <div class="section-head">
+        <div>
+          <h2 id="ahShelfTitle">Books by this author</h2>
+          <p class="sub" id="ahSub"></p>
+        </div>
+      </div>
+      <div class="books-grid" id="ahBooks"></div>
+    </div>
+  </section>
+
+  <div id="footer"></div>
+</body>
+</html>

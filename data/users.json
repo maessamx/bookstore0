@@ -1,0 +1,52 @@
+[
+  {
+    "id": "u1",
+    "name": "Mahmoud Essam",
+    "email": "admin@gmail.com",
+    "pass": "admin123",
+    "phone": "01000000000",
+    "governorate": "Cairo",
+    "role": "admin",
+    "joined": "2026-01-05"
+  },
+  {
+    "id": "u2",
+    "name": "Youssef Farag",
+    "email": "user@gmail.com",
+    "pass": "user123",
+    "phone": "01111111111",
+    "governorate": "Giza",
+    "role": "user",
+    "joined": "2026-02-18"
+  },
+  {
+    "id": "u3",
+    "name": "Karim Arafat",
+    "email": "karimarafat@mail.com",
+    "pass": "user123",
+    "phone": "01222222222",
+    "governorate": "Alexandria",
+    "role": "user",
+    "joined": "2026-03-02"
+  },
+  {
+    "id": "u4",
+    "name": "Youssef Mohamed",
+    "email": "youssefmo@mail.com",
+    "pass": "user123",
+    "phone": "01033333333",
+    "governorate": "Cairo",
+    "role": "user",
+    "joined": "2026-04-21"
+  },
+  {
+    "id": "u5",
+    "name": "Youssef Hegazy",
+    "email": "youssefhegazy@mail.com",
+    "pass": "user123",
+    "phone": "01144444444",
+    "governorate": "Mansoura",
+    "role": "user",
+    "joined": "2026-05-30"
+  }
+]
