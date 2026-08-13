@@ -1,0 +1,111 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Untitled Page</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="main.css">
+        <script  src="main.js"></script>
+
+ <script>
+
+    showheader();
+    showfooter();
+    
+</script>
+
+<body id='body'>
+    <div id="header"></div>
+    <div class="form-container flex17">
+        <div class="form-box" id="loginBox">
+            <h2>Login</h2>
+            <p class="subtitle"> enter your email & pass</p>
+            <form id="loginForm" class="flex17 flexcol">
+                <div class="input-group">
+                    <label>Email Address</label>
+                    <input type="email" value="admin@admin.com" id="loginEmail" required placeholder="youssef@example.com">
+                </div>
+                <div class="input-group">
+                    <label>Password</label>
+                    <div class="password-wrapper">
+                        <input type="password" value="admin123" id="loginPassword" required placeholder="••••••••">
+                        <i class="far fa-eye toggle-password" data-target="loginPassword"></i>
+                    </div>
+                </div>
+                <div class="flex17">
+                    <button type="submit" class="button">Login</button>
+                </div>
+
+            </form>
+            <p class="toggle-link">Don't have an account? <button class="btn-a" onclick="showSignup()"
+                    id="toSignup">Create one</button></p>
+        </div>
+        <div class="form-box hidden" id="signupBox">
+            <h2>Create Account</h2>
+            <p class="subtitle">Join our 📚BookStore</p>
+            <form id="signupForm">
+                <div class="input-group">
+                    <label>Full Name</label>
+                    <input type="text" id="fullName" required placeholder="Mahmoud">
+                </div>
+                <div class="input-group">
+                    <label>Email Address</label>
+                    <input type="email" id="signupEmail" required placeholder="mahmoud@example.com">
+                </div>
+                <div class="input-group">
+                    <label>Phone</label>
+                    <input type="tel" id="signupPhone" required placeholder="01234567890">
+                </div>
+                <div class="input-group">
+                    <label>governorate</label>
+                    <input type="text" id="governorate" required placeholder="Cairo">
+                </div>
+                <div class="input-group">
+                    <label>Password</label>
+                    <div class="password-wrapper">
+                        <input type="password" id="signupPassword" required placeholder="*******">
+                        <i class="far fa-eye toggle-password" data-target="signupPassword"></i>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label>Confirm Password</label>
+                    <div class="password-wrapper">
+                        <input type="password" id="confirmPassword" required placeholder="••••••••">
+                        <i class="far fa-eye toggle-password" data-target="confirmPassword"></i>
+                    </div>
+                </div>
+                <div class="flex17">
+
+                    <button type="submit" class="button">Register</button>
+                </div>
+            </form>
+            <p class="toggle-link">Already have an account? <button class="btn-a" onclick="showLogin()">Sign In</button>
+            </p>
+        </div>
+    </div>
+<script>
+    const loginBox = document.getElementById('loginBox');
+const signupBox = document.getElementById('signupBox');
+const signupForm = document.getElementById('signupForm');
+const loginForm = document.getElementById('loginForm');
+let registeredUser = null;
+
+function showSignup() {
+    loginBox.classList.add('hidden');
+    signupBox.classList.remove('hidden');
+}
+
+function showLogin() {
+    signupBox.classList.add('hidden');
+    loginBox.classList.remove('hidden');
+}
+
+</script>
+    <script  type="module" src="login.js"></script>
+
+    <div id="footer"></div>
+</body>
+
+</html>
